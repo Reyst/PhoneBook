@@ -15,7 +15,7 @@ import gsi.reyst.phonebook.R;
 import gsi.reyst.phonebook.domain.Phone;
 
 
-public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.PhoneHolder> { // implements OnChangePhoneListener {
+public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.PhoneHolder> {
 
     private List<Phone> model;
 
@@ -42,12 +42,6 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.PhoneHolder>
     public int getItemCount() {
         return model.size();
     }
-
-//    @Override
-//    public void onPhoneChanged(Phone phone, int index) {
-//        model.set(index, phone);
-//        notifyItemChanged(index);
-//    }
 
     class PhoneHolder extends RecyclerView.ViewHolder implements PopupMenu.OnMenuItemClickListener {
 
