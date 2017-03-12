@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.widget.EditText;
 
@@ -34,6 +35,7 @@ public class PersonPresenterImpl implements PersonPresenter, PhoneAdapter.PhoneE
         AlertDialog.Builder alert = new AlertDialog.Builder(context);
         final EditText input = new EditText(context);
         input.setId(R.id.phone_edit_text_id);
+        //input.setInputType(InputType.TYPE_CLASS_PHONE);
         alert.setView(input);
 
         alert.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -94,6 +96,7 @@ public class PersonPresenterImpl implements PersonPresenter, PhoneAdapter.PhoneE
     public void editPhone(final Phone phone, final int index) {
         AlertDialog.Builder alert = new AlertDialog.Builder(context);
         final EditText input = new EditText(context);
+        //input.setInputType(InputType.TYPE_CLASS_PHONE);
         input.setId(R.id.phone_edit_text_id);
         input.setText(phone.getPhoneNo());
         alert.setView(input);
